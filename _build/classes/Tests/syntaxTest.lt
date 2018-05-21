@@ -1,0 +1,23 @@
+fib(n) :
+  jei (n <= 2) :
+    <<< n
+  jeiNe :
+    <<< fib(n-2) + fib(n-1)
+  >>>
+>>>
+
+fibonaciIndex(index): 
+    sequence = []
+    ratas (i = 1, index+1):
+      sequence = sequence + fib(i)
+    >>>
+    <<< sequence[index]
+>>>
+
+spausdinti(fibonaciIndex(5));
+rasyti("Atsakymas.txt", fibonaciIndex(5));
+
+n = [1,0,0]
+m = [1,0,[1, 1, 1]]
+n = n + m
+spausdinti(n);

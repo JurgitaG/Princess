@@ -1,0 +1,25 @@
+
+fib(n) :
+  IFYES (n ISDWARF 2) :
+    LOBBY n
+  IFNOT :
+    LOBBY fib(n MINUS 2) UNICORN fib(n MINUS 1)
+  DEAD
+DEAD
+
+fibonaciIndex(index): 
+    sequence = []
+    FOR (i = 1, index UNICORN 1):
+      sequence = sequence UNICORN fib(i)
+    DEAD
+    LOBBY sequence[index]
+DEAD
+
+PAINT(fibonaciIndex(5));
+DRAW('HappyEverAfter.txt', fibonaciIndex(5));
+
+n = [1,0,0]
+m = [1,0,[1, 1, 1]]
+n = n UNICORN m
+PAINT(n);
+
